@@ -12,6 +12,12 @@ import androidx.compose.ui.graphics.Color
 import org.jhaard.simplekmptemplatemvvm.viewmodels.FirstScreenViewModel
 import org.koin.compose.viewmodel.koinViewModel
 
+
+/**
+ * First Example Screen.
+ * @param viewModel Use the Koin viewmodel created from modules.
+ * @param onNavigate The navigation route.
+ */
 @Composable
 fun FirstScreen(
     viewModel: FirstScreenViewModel = koinViewModel(),

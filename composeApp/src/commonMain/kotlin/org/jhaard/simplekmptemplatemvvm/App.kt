@@ -7,11 +7,20 @@ import org.jhaard.simplekmptemplatemvvm.modules.appViewModels
 import org.jhaard.simplekmptemplatemvvm.navigation.Navigation
 import org.koin.compose.KoinApplication
 import org.koin.compose.KoinApplicationPreview
+import org.koin.core.logger.Level
 
+
+/**
+ * Entry point composable App(), starting Koin and print its process.
+ * Using Koin via documentation:
+ * https://insert-koin.io/docs/reference/koin-compose/compose
+ *
+ */
 @Composable
 fun App() {
     KoinApplication(
         application = {
+            printLogger(level = Level.INFO)
             modules(
                 modules = appViewModels
             )

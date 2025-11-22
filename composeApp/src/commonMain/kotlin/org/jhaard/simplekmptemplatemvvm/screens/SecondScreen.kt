@@ -12,6 +12,11 @@ import androidx.compose.ui.graphics.Color
 import org.jhaard.simplekmptemplatemvvm.viewmodels.SecondScreenViewModel
 import org.koin.compose.viewmodel.koinViewModel
 
+/**
+ * Second Example Screen.
+ * @param viewModel Use the Koin viewmodel created from modules.
+ * @param onNavigateBack Go back to first screen.
+ */
 @Composable
 fun SecondScreen(
     viewModel: SecondScreenViewModel = koinViewModel(),
