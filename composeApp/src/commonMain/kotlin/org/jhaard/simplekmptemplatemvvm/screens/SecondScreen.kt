@@ -14,9 +14,7 @@ import androidx.navigation.NavOptions
 
 @Composable
 fun SecondScreen(
-    screenArgs: String,
-    navController: NavController,
-    navOptions: NavOptions
+    onNavigateBack: () -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
@@ -28,13 +26,7 @@ fun SecondScreen(
             color = Color.Red,
         )
 
-        // Passing a string
-        Text(text = screenArgs)
-
-        Button(onClick = {
-            navController.popBackStack()
-
-        }) {
+        Button(onClick = onNavigateBack) {
             Text(text = "Go Back")
         }
 

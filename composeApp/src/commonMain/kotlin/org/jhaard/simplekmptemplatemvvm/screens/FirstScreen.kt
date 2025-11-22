@@ -15,8 +15,7 @@ import org.jhaard.simplekmptemplatemvvm.navigation.Screens
 
 @Composable
 fun FirstScreen(
-    navController: NavController,
-    navOptions: NavOptions
+    onNavigate: (String) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
@@ -27,11 +26,7 @@ fun FirstScreen(
             text = "First Screen",
             color = Color.Blue
         )
-        Button(onClick = {
-            val route = Screens.SecondScreen.withArguments("...With some args")
-            navController.navigate(route = route, navOptions = navOptions)
-
-        }) {
+        Button(onClick = { onNavigate("second_screen") }) {
             Text(text = "Route to Second Screen")
         }
     }
