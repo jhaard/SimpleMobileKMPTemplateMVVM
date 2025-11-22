@@ -6,9 +6,9 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.jhaard.simplekmptemplatemvvm.modules.appViewModels
 import org.jhaard.simplekmptemplatemvvm.navigation.Navigation
 import org.koin.compose.KoinApplication
+import org.koin.compose.KoinApplicationPreview
 
 @Composable
-@Preview
 fun App() {
     KoinApplication(
         application = {
@@ -25,4 +25,12 @@ fun App() {
         }
     )
 
+}
+
+@Preview
+@Composable
+fun PreviewApp() {
+    KoinApplicationPreview(application = { modules(appViewModels) }) {
+        App()
+    }
 }
