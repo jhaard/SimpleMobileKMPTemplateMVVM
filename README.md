@@ -51,7 +51,7 @@ MIT License
 - [ ] Testing setup
 
 
-## 👨‍💻 About
+##### 👨‍💻 About
 
 Built by Jörgen Hård as a foundation for KMP projects.
 
