@@ -3,17 +3,16 @@ package org.jhaard.simplekmptemplatemvvm.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavOptions
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import androidx.navigation.navOptions
 import org.jhaard.simplekmptemplatemvvm.screens.FirstScreen
 import org.jhaard.simplekmptemplatemvvm.screens.SecondScreen
 
 /**
- * Navigation with NavHost to the screen routes of the game.
+ * // TODO Review navigation and Koin
+ * Navigation with NavHost to the screen routes.
  */
 @Composable
 fun Navigation() {
@@ -26,24 +25,21 @@ fun Navigation() {
     ) {
         composable(route = Screens.FirstScreen.route) {
             FirstScreen(
-                navController = navController,
-                navOptions = navOptions()
+                onNavigate = { route ->
+                    navController.navigate(route, navOptions())
+                }
             )
         }
-        composable(route = Screens.SecondScreen.route + "/{key}",
-            arguments = listOf(navArgument("key") {
-                type = NavType.StringType
-            })
-        ) {
-            it.arguments?.getString("key")?.let { screenArgs ->
-                SecondScreen(
-                    screenArgs = screenArgs,
-                    navController = navController,
-                    navOptions = navOptions()
-                )
-            }
-        }
 
+        composable(
+            route = Screens.SecondScreen.route
+        ) {
+            SecondScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
+            )
+        }
     }
 
 }
