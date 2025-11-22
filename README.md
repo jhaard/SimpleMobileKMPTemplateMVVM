@@ -55,4 +55,4 @@ MIT License
 
 Built by Jörgen Hård as a foundation for KMP projects.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/j%C3%B6rgen-h%C3%A5rd-17853960/) | [![Portfolio](https://img.shields.io/badge/github-repo-green?logo=github)](https://github.com/jhaard) | [![Email](https://img.shields.io/badge/Email-red?logo=gmail)](mailto:jorgen.hard@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/j%C3%B6rgen-h%C3%A5rd-17853960/) | [![Portfolio](https://img.shields.io/badge/github-portfolio-green?logo=github)](https://github.com/jhaard) | [![Email](https://img.shields.io/badge/Email-red?logo=gmail)](mailto:jorgen.hard@gmail.com)
