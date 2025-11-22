@@ -9,12 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavController
-import androidx.navigation.NavOptions
-import org.jhaard.simplekmptemplatemvvm.navigation.Screens
+import org.jhaard.simplekmptemplatemvvm.viewmodels.FirstScreenViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun FirstScreen(
+    viewModel: FirstScreenViewModel = koinViewModel(),
     onNavigate: (String) -> Unit
 ) {
     Column(

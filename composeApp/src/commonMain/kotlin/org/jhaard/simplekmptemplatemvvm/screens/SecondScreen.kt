@@ -9,11 +9,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavController
-import androidx.navigation.NavOptions
+import org.jhaard.simplekmptemplatemvvm.viewmodels.SecondScreenViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun SecondScreen(
+    viewModel: SecondScreenViewModel = koinViewModel(),
     onNavigateBack: () -> Unit
 ) {
     Column(
