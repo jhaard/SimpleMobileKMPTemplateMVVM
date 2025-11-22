@@ -9,14 +9,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavController
-import androidx.navigation.NavOptions
-import org.jhaard.simplekmptemplatemvvm.navigation.Screens
+import org.jhaard.simplekmptemplatemvvm.viewmodels.FirstScreenViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
+
+/**
+ * First Example Screen.
+ * @param viewModel Use the Koin viewmodel created from modules.
+ * @param onNavigate The navigation route.
+ */
 @Composable
 fun FirstScreen(
-    navController: NavController,
-    navOptions: NavOptions
+    viewModel: FirstScreenViewModel = koinViewModel(),
+    onNavigate: (String) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
@@ -27,11 +32,7 @@ fun FirstScreen(
             text = "First Screen",
             color = Color.Blue
         )
-        Button(onClick = {
-            val route = Screens.SecondScreen.withArguments("...With some args")
-            navController.navigate(route = route, navOptions = navOptions)
-
-        }) {
+        Button(onClick = { onNavigate("second_screen") }) {
             Text(text = "Route to Second Screen")
         }
     }

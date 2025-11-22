@@ -9,14 +9,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.navigation.NavController
-import androidx.navigation.NavOptions
+import org.jhaard.simplekmptemplatemvvm.viewmodels.SecondScreenViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
+/**
+ * Second Example Screen.
+ * @param viewModel Use the Koin viewmodel created from modules.
+ * @param onNavigateBack Go back to first screen.
+ */
 @Composable
 fun SecondScreen(
-    screenArgs: String,
-    navController: NavController,
-    navOptions: NavOptions
+    viewModel: SecondScreenViewModel = koinViewModel(),
+    onNavigateBack: () -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
@@ -28,13 +32,7 @@ fun SecondScreen(
             color = Color.Red,
         )
 
-        // Passing a string
-        Text(text = screenArgs)
-
-        Button(onClick = {
-            navController.popBackStack()
-
-        }) {
+        Button(onClick = onNavigateBack) {
             Text(text = "Go Back")
         }
 

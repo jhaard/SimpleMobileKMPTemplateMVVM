@@ -1,7 +1,7 @@
 package org.jhaard.simplekmptemplatemvvm.navigation
 
 /**
- * The different screens of the game.
+ * The different screens.
  *
  * @param route The string route to navigate to.
  */
