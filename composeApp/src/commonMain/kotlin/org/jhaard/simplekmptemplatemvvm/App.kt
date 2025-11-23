@@ -11,7 +11,7 @@ import org.koin.core.logger.Level
 
 
 /**
- * Entry point composable App(), starting Koin and print its process.
+ * Entry point composable App(), starting Koin and print its starting process.
  * Using Koin via documentation:
  * https://insert-koin.io/docs/reference/koin-compose/compose
  *
