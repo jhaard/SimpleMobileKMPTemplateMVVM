@@ -45,7 +45,7 @@ MIT License
 - [x] Koin setup
 - [x] Navigation
 - [x] MVVM
-- [ ] UiStates
+- [x] UiState
 - [ ] Ktor integration
 - [ ] Local Storage
 - [ ] Testing setup
