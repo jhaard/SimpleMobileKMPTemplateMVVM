@@ -46,7 +46,7 @@ MIT License
 - [x] Navigation
 - [x] MVVM
 - [x] UiState
-- [ ] Ktor integration
+- [x] Ktor integration
 - [ ] Local Storage
 - [ ] Testing setup
 

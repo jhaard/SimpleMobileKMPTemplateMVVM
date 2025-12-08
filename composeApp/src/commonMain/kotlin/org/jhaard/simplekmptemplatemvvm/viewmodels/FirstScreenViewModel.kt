@@ -7,12 +7,13 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import org.jhaard.simplekmptemplatemvvm.models.Note
 import org.jhaard.simplekmptemplatemvvm.models.UiState
+import org.jhaard.simplekmptemplatemvvm.repositories.Repository
 
 /**
  * Build your viewModel for the screen.
  * See modules for the Koin implementation.
  */
-class FirstScreenViewModel(): ViewModel() {
+class FirstScreenViewModel(private val repository: Repository): ViewModel() {
 
     private val _uiState = MutableStateFlow(UiState())
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
