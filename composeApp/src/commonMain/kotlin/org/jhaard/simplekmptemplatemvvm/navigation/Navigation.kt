@@ -2,11 +2,9 @@ package org.jhaard.simplekmptemplatemvvm.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navOptions
 import org.jhaard.simplekmptemplatemvvm.screens.FirstScreen
 import org.jhaard.simplekmptemplatemvvm.screens.SecondScreen
 
@@ -26,7 +24,7 @@ fun Navigation() {
         composable(route = Screens.FirstScreen.route) {
             FirstScreen(
                 onNavigate = { route ->
-                    navController.navigate(route, navOptions())
+                    navController.navigate(route)
                 }
             )
         }
@@ -36,7 +34,7 @@ fun Navigation() {
         ) {
             SecondScreen(
                 onNavigateBack = {
-                    navController.popBackStack()
+                    navController.navigateUp()
                 }
             )
         }
@@ -44,6 +42,8 @@ fun Navigation() {
 
 }
 
+// NavOptions - Use if needed
+/*
 fun navOptions(): NavOptions {
     return navOptions {
         launchSingleTop = true
@@ -54,3 +54,4 @@ fun navOptions(): NavOptions {
         }
     }
 }
+ */
