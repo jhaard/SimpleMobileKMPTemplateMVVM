@@ -9,7 +9,8 @@ with MVVM, Koin DI, Navigation, Ktor and other common tools.
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue)
 ![Compose](https://img.shields.io/badge/Compose-1.9.1-green)
 ![Navigation](https://img.shields.io/badge/Navigation-2.9.1-yellow)
-![Koin](https://img.shields.io/badge/Koin-4.2.0alpha-orange)
+![Koin](https://img.shields.io/badge/Koin-4.2.0alpha2-orange)
+![Ktor](https://img.shields.io/badge/Ktor-3.3.3-purple)
 
 
 ##### Features
