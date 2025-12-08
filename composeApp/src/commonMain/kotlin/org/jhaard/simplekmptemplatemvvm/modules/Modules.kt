@@ -1,10 +1,14 @@
 package org.jhaard.simplekmptemplatemvvm.modules
 
 
+import io.ktor.client.HttpClient
+import org.jhaard.simplekmptemplatemvvm.httpClient.createHttpClient
+import org.jhaard.simplekmptemplatemvvm.repositories.Repository
 import org.jhaard.simplekmptemplatemvvm.viewmodels.FirstScreenViewModel
 import org.jhaard.simplekmptemplatemvvm.viewmodels.SecondScreenViewModel
 import org.koin.dsl.module
 import org.koin.core.module.dsl.viewModel
+import org.koin.core.qualifier.named
 
 /**
  * Koin modules
@@ -12,7 +16,20 @@ import org.koin.core.module.dsl.viewModel
  * https://insert-koin.io/docs/reference/koin-compose/compose
  *
  */
-val appViewModels = module {
-    viewModel { FirstScreenViewModel() }
+
+// Network
+val appNetworkModule = module {
+    // Name optional for this example.
+    single<HttpClient>(named("public")) { createHttpClient() }
+}
+
+// Repos
+val appRepositoryModule = module {
+    single<Repository> { Repository(client = get(named(name = "public"))) }
+}
+
+// ViewModels
+val appViewModelModule = module {
+    viewModel { FirstScreenViewModel(repository = get()) }
     viewModel { SecondScreenViewModel() }
 }

@@ -29,6 +29,12 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            // Ktor client - Android
+            implementation(libs.ktor.client.okhttp)
+
+            // Coroutines - Android
+            implementation(libs.kotlinx.coroutines.android)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -40,6 +46,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            //Serialization
+            implementation(libs.kotlinx.serialization.json)
+
             // Navigation
             implementation(libs.navigation.compose)
 
@@ -48,6 +57,19 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
 
+            // Ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.content.negotiation)
+
+            // Coroutines
+            implementation(libs.kotlinx.coroutines.core)
+
+        }
+        iosMain.dependencies {
+
+            // Ktor client - iOS
+            implementation(libs.ktor.client.darwin)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
