@@ -24,7 +24,11 @@ fun App() {
         application = {
             printLogger(level = Level.INFO)
             modules(
-                modules = listOf(appNetworkModule, appRepositoryModule, appViewModelModule)
+                modules = listOf(
+                    appNetworkModule,
+                    appRepositoryModule,
+                    appViewModelModule
+                )
             )
         },
         content = {
@@ -39,7 +43,15 @@ fun App() {
 @Preview
 @Composable
 fun PreviewApp() {
-    KoinApplicationPreview(application = { modules(appViewModelModule) }) {
+    KoinApplicationPreview(application = {
+        modules(
+            modules = listOf(
+                appNetworkModule,
+                appRepositoryModule,
+                appViewModelModule
+            )
+        )
+    }) {
         App()
     }
 }
