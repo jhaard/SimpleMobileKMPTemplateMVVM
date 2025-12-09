@@ -19,7 +19,7 @@ class FirstScreenViewModel(private val repository: Repository): ViewModel() {
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 
 
-    fun saveNote(note: Note) {
+    fun addNote(note: Note) {
         _uiState.update { it.copy(notes = it.notes + note, currentNote = note) }
     }
 
