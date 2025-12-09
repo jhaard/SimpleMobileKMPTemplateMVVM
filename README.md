@@ -1,25 +1,34 @@
 #### KMP Template with MVVM, DI, Navigation, Ktor
 
-A simple structural setup-template for KMP 
-with MVVM, Koin DI, Navigation, Ktor and other common tools.
+A simple setup-template for KMP with MVVM, Koin DI, Navigation, 
+Ktor and other common tools.
 
 
 ##### Versions
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue)
 ![Compose](https://img.shields.io/badge/Compose-1.9.1-green)
-![Navigation](https://img.shields.io/badge/Navigation-2.9.1-yellow)
-![Koin](https://img.shields.io/badge/Koin-4.2.0alpha-orange)
+![Navigation](https://img.shields.io/badge/Navigation-2.9.1-orange)
+![Koin](https://img.shields.io/badge/Koin-4.2.0alpha2-yellow)
+![Ktor](https://img.shields.io/badge/Ktor-3.3.3-purple)
+![MultiplatformSettings](https://img.shields.io/badge/MultiplatformSettings-1.3.0-red)
 
+
+##### Instructions
+
+(To be implemented)
 
 ##### Features
 
 - MVVM architecture
 - Koin dependency injection
-- Jetpack Compose Navigation
+- Jetpack Compose
+- Navigation
 - Ktor for networking
+- Error handling 
 - State management
-- [Future features]
+- Persistent storage with key/value
+- Testing
 
 
 ##### Architecture
@@ -35,11 +44,6 @@ Ktor Client (API calls)
 ```
 
 
-##### License
-
-MIT License
-
-
 ##### Roadmap
 
 - [x] Koin setup
@@ -47,7 +51,7 @@ MIT License
 - [x] MVVM
 - [x] UiState
 - [x] Ktor integration
-- [ ] Local Storage
+- [x] Local Storage
 - [ ] Testing setup
 
 

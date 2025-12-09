@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.jhaard.simplekmptemplatemvvm.modules.appViewModelModule
 import org.jhaard.simplekmptemplatemvvm.modules.appNetworkModule
+import org.jhaard.simplekmptemplatemvvm.modules.appPreferencesModule
 import org.jhaard.simplekmptemplatemvvm.modules.appRepositoryModule
 import org.jhaard.simplekmptemplatemvvm.navigation.Navigation
 import org.koin.compose.KoinApplication
@@ -26,6 +27,7 @@ fun App() {
             modules(
                 modules = listOf(
                     appNetworkModule,
+                    appPreferencesModule,
                     appRepositoryModule,
                     appViewModelModule
                 )
@@ -47,6 +49,7 @@ fun PreviewApp() {
         modules(
             modules = listOf(
                 appNetworkModule,
+                appPreferencesModule,
                 appRepositoryModule,
                 appViewModelModule
             )

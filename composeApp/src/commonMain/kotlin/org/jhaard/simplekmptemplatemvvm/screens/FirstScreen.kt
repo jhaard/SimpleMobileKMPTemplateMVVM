@@ -50,7 +50,7 @@ fun FirstScreen(
             EditNote(text = text, onTextChange = {
                 text = it
             }, onSaveClick = {
-                viewModel.saveNote(note = Note(text = text))
+                viewModel.addNote(note = Note(text = text))
             })
 
         }
