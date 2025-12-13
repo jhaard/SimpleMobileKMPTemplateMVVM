@@ -14,6 +14,8 @@ junit = "4.13.2"
 koinCompose = "4.2.0-alpha2"
 kotlin = "2.2.20"
 jetbrainsNavigationCompose = "2.9.1"
+nav3Core = "1.0.0"
+lifecycleViewmodelNav3 = "2.10.0"
 ktor = "3.3.3"
 kotlinx-coroutines = "1.10.2"
 kotlinxSerialization = "1.9.0"
@@ -36,6 +38,10 @@ androidx-lifecycle-runtimeCompose = { module = "org.jetbrains.androidx.lifecycle
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }
 multiplatform-settings-no-arg = { module = "com.russhwolf:multiplatform-settings-no-arg", version.ref = "multiplatformSettings" }
 navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "jetbrainsNavigationCompose" }
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3Core" }
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3Core" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodelNav3" }
+koin-navigation3 = {module = "io.insert-koin:koin-compose-navigation3", version.ref = "koinCompose" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }

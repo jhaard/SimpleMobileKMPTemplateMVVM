@@ -35,6 +35,10 @@ kotlin {
 
             // Coroutines - Android
             implementation(libs.kotlinx.coroutines.android)
+
+            //Navigation 3 UI
+            implementation(libs.androidx.navigation3.ui)
+            implementation(libs.androidx.lifecycle.viewmodel.navigation3)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -46,6 +50,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            // Navigation3
+            implementation(libs.androidx.navigation3.runtime)
+
             //Serialization
             implementation(libs.kotlinx.serialization.json)
 
@@ -56,6 +63,7 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
+            implementation(libs.koin.navigation3)
 
             // Ktor
             implementation(libs.ktor.client.core)
