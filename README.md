@@ -17,7 +17,8 @@ Ktor and other common tools.
 1. Choose SimpleMobileKMPTemplateMVVM.
 2. Use this template -> Create new repository (Give it a name)
 3. Clone repo to Android Studio.
-4. Go to build.gradle.kts (:composeApp) and change name on:
+4. Go to build.gradle.kts (:composeApp) 
+and change namespace and applicationId with your own id and name:
 
 ```
 android {
@@ -38,7 +39,7 @@ android {
 
 5. Open commonMain -> Kotlin-directory and right click on the template directory name and choose
    Refactor -> Rename -> All directories.
-6. Open settings.gradle.kts and change root.name to your project name.
+6. Open settings.gradle.kts and change root.name to your new project name.
 7. Sync gradle.
 8. Open root folder- > res -> values -> strings.xml and change app_name.
 9. Choose Build -> Clean Project.
@@ -47,7 +48,7 @@ android {
 
     For iOS module:
 1. Choose project level and on iosApp[SimpleMobileKMPTemplateMVVM] right click and choose refactor -> What would you
-   like to do? -> Renamne module.
+   like to do? -> Choose Rename module.
 2. Go to Configuration folder In iosApp module and open Config.xcconfig file. Replace:
 
 ```
@@ -55,7 +56,7 @@ android {
    PRODUCT_BUNDLE_IDENTIFIER=org.jhaard.simplekmptemplatemvvm.SimpleMobileKMPTemplateMVVM$(TEAM_ID)
 ```
 
-With your new name:
+With your new project id and name (example):
 
 ```
 PRODUCT_NAME=TestProject
