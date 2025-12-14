@@ -46,7 +46,7 @@ android {
 10. Choose Build -> Assemble composeApp Run Configuration.
 11. Choose File -> Invalidate Caches -> Invalidate and restart.
 
-    For iOS module:
+For iOS module:
 1. Choose project level and on iosApp[SimpleMobileKMPTemplateMVVM] right click and choose refactor -> What would you
    like to do? -> Choose Rename module.
 2. Go to Configuration folder In iosApp module and open Config.xcconfig file. Replace:
