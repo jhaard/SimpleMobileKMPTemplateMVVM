@@ -51,7 +51,7 @@ Ktor Client (API calls)
 - [x] MVVM
 - [x] UiState
 - [x] Ktor integration
-- [x] Local storage
+- [x] Local preferences
 - [x] CI automation and testing preparation
 
 
