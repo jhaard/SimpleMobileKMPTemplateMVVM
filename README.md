@@ -6,10 +6,10 @@ Ktor and other common tools.
 
 ##### Versions
 
-![Kotlin](https://img.shields.io/badge/Kotlin-2.2.20-blue)
-![Compose](https://img.shields.io/badge/Compose-1.9.1-green)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.2.21-blue)
+![Compose](https://img.shields.io/badge/Compose-1.9.3-green)
 ![Navigation](https://img.shields.io/badge/Navigation-2.9.1-orange)
-![Koin](https://img.shields.io/badge/Koin-4.2.0alpha2-yellow)
+![Koin](https://img.shields.io/badge/Koin-4.2.0alpha3-yellow)
 ![Ktor](https://img.shields.io/badge/Ktor-3.3.3-purple)
 ![MultiplatformSettings](https://img.shields.io/badge/MultiplatformSettings-1.3.0-red)
 
