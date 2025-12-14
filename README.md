@@ -1,8 +1,7 @@
 #### KMP Template with MVVM, DI, Navigation, Ktor
 
-A simple setup-template for KMP with MVVM, Koin DI, Navigation, 
+A simple setup-template for KMP with MVVM, Koin DI, Navigation,
 Ktor and other common tools.
-
 
 ##### Versions
 
@@ -13,10 +12,58 @@ Ktor and other common tools.
 ![Ktor](https://img.shields.io/badge/Ktor-3.3.3-purple)
 ![MultiplatformSettings](https://img.shields.io/badge/MultiplatformSettings-1.3.0-red)
 
-
 ##### Instructions
 
-(To be implemented)
+1. Choose SimpleMobileKMPTemplateMVVM.
+2. Use this template -> Create new repository (Give it a name)
+3. Clone repo to Android Studio.
+4. Go to build.gradle.kts (:composeApp) and change name on:
+
+```
+android {
+
+    namespace = "org.jhaard.testproject"
+    compileSdk = libs.versions.android.compileSdk.get().toInt()
+
+    defaultConfig {
+        applicationId = "org.jhaard.testproject"
+        minSdk = libs.versions.android.minSdk.get().toInt()
+        targetSdk = libs.versions.android.targetSdk.get().toInt()
+        versionCode = 1
+        versionName = "1.0"
+    }
+    
+}
+```
+
+5. Open commonMain -> Kotlin-directory and right click on the template directory name and choose
+   Refactor -> Rename -> All directories.
+6. Open settings.gradle.kts and change root.name to your project name.
+7. Sync gradle.
+8. Open root folder- > res -> values -> strings.xml and change app_name.
+9. Choose Build -> Clean Project.
+10. Choose Build -> Assemble composeApp Run Configuration.
+11. Choose File -> Invalidate Caches -> Invalidate and restart.
+
+    For iOS module:
+1. Choose project level and on iosApp[SimpleMobileKMPTemplateMVVM] right click and choose refactor -> What would you
+   like to do? -> Renamne module.
+2. Go to Configuration folder In iosApp module and open Config.xcconfig file. Replace:
+
+```
+   PRODUCT_NAME=SimpleMobileKMPTemplateMVVM
+   PRODUCT_BUNDLE_IDENTIFIER=org.jhaard.simplekmptemplatemvvm.SimpleMobileKMPTemplateMVVM$(TEAM_ID)
+```
+
+With your new name:
+
+```
+PRODUCT_NAME=TestProject
+PRODUCT_BUNDLE_IDENTIFIER=org.jhaard.testproject.TestProject$(TEAM_ID)
+```
+
+3. Clean, rebuild iosApp and invalidate caches again.
+4. Build and run the application.
 
 ##### Features
 
@@ -25,11 +72,10 @@ Ktor and other common tools.
 - Jetpack Compose
 - Navigation
 - Ktor for networking
-- Error handling 
+- Error handling
 - State management
 - Persistent storage with key/value
-- Preparing for unit testing and CI automation 
-
+- Preparing for unit testing and CI automation
 
 ##### Architecture
 
@@ -43,7 +89,6 @@ Repository (Data layer)
 Ktor Client (API calls)
 ```
 
-
 ##### Roadmap
 
 - [x] Koin setup
@@ -53,7 +98,6 @@ Ktor Client (API calls)
 - [x] Ktor integration
 - [x] Local preferences
 - [x] CI automation and testing preparation
-
 
 ##### 👨‍💻 About
 
