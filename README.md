@@ -28,7 +28,7 @@ Ktor and other common tools.
 - Error handling 
 - State management
 - Persistent storage with key/value
-- Testing
+- Preparing for unit testing and CI automation 
 
 
 ##### Architecture
@@ -51,8 +51,8 @@ Ktor Client (API calls)
 - [x] MVVM
 - [x] UiState
 - [x] Ktor integration
-- [x] Local Storage
-- [ ] Testing setup
+- [x] Local preferences
+- [x] CI automation and testing preparation
 
 
 ##### 👨‍💻 About
