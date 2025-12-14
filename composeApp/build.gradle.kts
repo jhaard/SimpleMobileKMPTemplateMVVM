@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlinxSerialization)
 }
 
 kotlin {
@@ -64,6 +65,11 @@ kotlin {
 
             // Coroutines
             implementation(libs.kotlinx.coroutines.core)
+
+            // Material3
+            implementation(libs.compose.material3)
+            implementation(libs.compose.material3.adaptive.suite)
+            implementation(libs.compose.material3.windowSizeClass)
 
             // Multiplatform Settings
             implementation(libs.multiplatform.settings)
